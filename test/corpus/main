@@ -1,0 +1,90 @@
+==========
+Empty file
+==========
+
+()
+
+---
+(source_file
+  (list))
+
+=======================
+Empty file with comment
+=======================
+
+(
+; Hello world
+)
+
+---
+(source_file
+  (list
+    (comment)
+  )
+)
+
+=================================
+List of numbers
+=================================
+
+( 1 2 3/2 4 )
+
+---
+(source_file
+  (list
+      (number)
+      (number)
+      (number)
+      (number)
+  )
+)
+
+=================================
+List of numbers with dot
+=================================
+
+( 1 2 3/2 . 4 )
+
+---
+(source_file
+  (list
+      (number)
+      (number)
+      (number)
+      (dot)
+      (number)
+  )
+)
+
+=======================================
+List of numbers with dot in wrong place
+=======================================
+
+( 1 2 . 3/2 4 )
+
+---
+(source_file
+  (list
+      (number)
+      (number)
+      (dot)
+      (number)
+      (ERROR
+      (number))
+  )
+)
+
+=============================
+List of numbers with only dot
+=============================
+
+( . 3/2 )
+
+---
+(source_file
+  (list
+      (ERROR
+      (dot))
+      (number)
+  )
+)
