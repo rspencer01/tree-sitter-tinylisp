@@ -2,17 +2,8 @@
   "name": "tinylisp",
   "rules": {
     "source_file": {
-      "type": "CHOICE",
-      "members": [
-        {
-          "type": "SYMBOL",
-          "name": "list"
-        },
-        {
-          "type": "SEQ",
-          "members": []
-        }
-      ]
+      "type": "SYMBOL",
+      "name": "list"
     },
     "list": {
       "type": "SEQ",

@@ -2,7 +2,7 @@ module.exports = grammar({
   name: 'tinylisp',
 
   rules: {
-    source_file: $ => choice($.list, seq()),
+    source_file: $ => $.list,
 
     list : $ => seq(
       '(',
