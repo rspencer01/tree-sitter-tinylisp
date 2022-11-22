@@ -71,6 +71,10 @@
         },
         {
           "type": "SYMBOL",
+          "name": "slib"
+        },
+        {
+          "type": "SYMBOL",
           "name": "identifier"
         }
       ]
@@ -80,7 +84,7 @@
       "members": [
         {
           "type": "STRING",
-          "value": "#t"
+          "value": "⊤"
         },
         {
           "type": "STRING",
@@ -88,7 +92,7 @@
         },
         {
           "type": "STRING",
-          "value": "macro"
+          "value": "⊥"
         },
         {
           "type": "STRING",
@@ -128,11 +132,24 @@
         },
         {
           "type": "STRING",
-          "value": "list"
+          "value": "macro"
+        },
+        {
+          "type": "STRING",
+          "value": "floor"
         },
         {
           "type": "STRING",
           "value": "#env"
+        }
+      ]
+    },
+    "slib": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "list"
         },
         {
           "type": "STRING",
@@ -140,7 +157,11 @@
         },
         {
           "type": "STRING",
-          "value": "list"
+          "value": "cons"
+        },
+        {
+          "type": "STRING",
+          "value": "apply"
         },
         {
           "type": "STRING",
@@ -152,7 +173,7 @@
         },
         {
           "type": "STRING",
-          "value": "cons"
+          "value": "tail"
         },
         {
           "type": "STRING",
@@ -180,7 +201,19 @@
         },
         {
           "type": "STRING",
-          "value": "tail"
+          "value": "abs"
+        },
+        {
+          "type": "STRING",
+          "value": "each"
+        },
+        {
+          "type": "STRING",
+          "value": "is_even"
+        },
+        {
+          "type": "STRING",
+          "value": "is_odd"
         }
       ]
     },
@@ -190,11 +223,11 @@
     },
     "identifier": {
       "type": "PATTERN",
-      "value": "[^\\s\\(\\)\\.]+"
+      "value": "[^\\s\\(\\)∙]+"
     },
     "dot": {
-      "type": "PATTERN",
-      "value": "\\."
+      "type": "STRING",
+      "value": "∙"
     },
     "comment": {
       "type": "TOKEN",

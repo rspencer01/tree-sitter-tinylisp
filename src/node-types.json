@@ -35,9 +35,18 @@
         {
           "type": "number",
           "named": true
+        },
+        {
+          "type": "slib",
+          "named": true
         }
       ]
     }
+  },
+  {
+    "type": "slib",
+    "named": true,
+    "fields": {}
   },
   {
     "type": "source_file",
@@ -56,10 +65,6 @@
   },
   {
     "type": "#env",
-    "named": false
-  },
-  {
-    "type": "#t",
     "named": false
   },
   {
@@ -103,7 +108,15 @@
     "named": false
   },
   {
+    "type": "abs",
+    "named": false
+  },
+  {
     "type": "and₂",
+    "named": false
+  },
+  {
+    "type": "apply",
     "named": false
   },
   {
@@ -131,7 +144,15 @@
     "named": true
   },
   {
+    "type": "each",
+    "named": false
+  },
+  {
     "type": "eval",
+    "named": false
+  },
+  {
+    "type": "floor",
     "named": false
   },
   {
@@ -144,6 +165,14 @@
   },
   {
     "type": "inv",
+    "named": false
+  },
+  {
+    "type": "is_even",
+    "named": false
+  },
+  {
+    "type": "is_odd",
     "named": false
   },
   {
@@ -176,6 +205,14 @@
   },
   {
     "type": "λ",
+    "named": false
+  },
+  {
+    "type": "⊤",
+    "named": false
+  },
+  {
+    "type": "⊥",
     "named": false
   }
 ]

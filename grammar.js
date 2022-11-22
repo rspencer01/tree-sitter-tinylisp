@@ -65,9 +65,9 @@ module.exports = grammar({
 
     number : $ => /\d+(\/\d+)?|\d+\.\d+/,
 
-    identifier : $ => /[^\s\(\)\.]+/,
+    identifier : $ => /[^\s\(\)∙]+/,
 
-    dot : $ => /\./,
+    dot : $ => '∙',
 
     comment: $ => token(seq(';', /.*/,'\n')),
   }

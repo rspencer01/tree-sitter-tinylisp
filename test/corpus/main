@@ -43,7 +43,7 @@ List of numbers
 List of numbers with dot
 =================================
 
-( 1 2 3/2 . 4 )
+( 1 2 3/2 ∙ 4 )
 
 ---
 (source_file
@@ -60,7 +60,7 @@ List of numbers with dot
 List of numbers with dot in wrong place
 =======================================
 
-( 1 2 . 3/2 4 )
+( 1 2 ∙ 3/2 4 )
 
 ---
 (source_file
@@ -78,7 +78,7 @@ List of numbers with dot in wrong place
 List of numbers with only dot
 =============================
 
-( . 3/2 )
+( ∙ 3/2 )
 
 ---
 (source_file
