@@ -20,16 +20,14 @@ module.exports = grammar({
       $.list,
       $.comment,
       $.builtin,
+      $.slib,
       $.identifier,
     ),
 
-    // These are not actually all builtins. Some of these are defined in the
-    // standard library, but they may as well be builtin.
     builtin : $ => choice(
-      // Actual builtins
-      "#t",
+      "⊤",
       "λ",
-      "macro",
+      "⊥",
       "+",
       "*",
       "neg",
@@ -39,10 +37,30 @@ module.exports = grammar({
       "'",
       "eval",
       "define",
-      "list",
+      "macro",
+      "floor",
       "#env",
-      // Standard library functions
-      "defun", "list", "not", "head", "cons", "-", "/", "or₂", "and₂", ">", "=", "tail"
+    ),
+
+    // Standard library functions
+    slib : $ => choice(
+      "list",
+      "defun",
+      "cons",
+      "apply",
+      "not",
+      "head",
+      "tail",
+      "-",
+      "/",
+      "or₂",
+      "and₂",
+      ">",
+      "=",
+      "abs",
+      "each",
+      "is_even",
+      "is_odd",
     ),
 
     number : $ => /\d+(\/\d+)?|\d+\.\d+/,
