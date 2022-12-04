@@ -84,39 +84,11 @@
       "members": [
         {
           "type": "STRING",
-          "value": "⊤"
-        },
-        {
-          "type": "STRING",
           "value": "λ"
         },
         {
           "type": "STRING",
-          "value": "⊥"
-        },
-        {
-          "type": "STRING",
-          "value": "+"
-        },
-        {
-          "type": "STRING",
-          "value": "*"
-        },
-        {
-          "type": "STRING",
-          "value": "neg"
-        },
-        {
-          "type": "STRING",
-          "value": "inv"
-        },
-        {
-          "type": "STRING",
-          "value": "<"
-        },
-        {
-          "type": "STRING",
-          "value": "cond"
+          "value": "macro"
         },
         {
           "type": "STRING",
@@ -132,7 +104,27 @@
         },
         {
           "type": "STRING",
-          "value": "macro"
+          "value": "#env"
+        },
+        {
+          "type": "STRING",
+          "value": "+"
+        },
+        {
+          "type": "STRING",
+          "value": "×"
+        },
+        {
+          "type": "STRING",
+          "value": "neg"
+        },
+        {
+          "type": "STRING",
+          "value": "inv"
+        },
+        {
+          "type": "STRING",
+          "value": "<"
         },
         {
           "type": "STRING",
@@ -140,7 +132,7 @@
         },
         {
           "type": "STRING",
-          "value": "#env"
+          "value": "cond"
         }
       ]
     },

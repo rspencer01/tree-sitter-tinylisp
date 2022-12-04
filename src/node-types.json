@@ -80,10 +80,6 @@
     "named": false
   },
   {
-    "type": "*",
-    "named": false
-  },
-  {
     "type": "+",
     "named": false
   },
@@ -204,15 +200,11 @@
     "named": false
   },
   {
+    "type": "×",
+    "named": false
+  },
+  {
     "type": "λ",
-    "named": false
-  },
-  {
-    "type": "⊤",
-    "named": false
-  },
-  {
-    "type": "⊥",
     "named": false
   }
 ]
