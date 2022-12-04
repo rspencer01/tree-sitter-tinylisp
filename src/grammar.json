@@ -223,11 +223,11 @@
     },
     "identifier": {
       "type": "PATTERN",
-      "value": "[^\\s\\(\\)∙]+"
+      "value": "[^\\s\\(\\)⋮]+"
     },
     "dot": {
       "type": "STRING",
-      "value": "∙"
+      "value": "⋮"
     },
     "comment": {
       "type": "TOKEN",
