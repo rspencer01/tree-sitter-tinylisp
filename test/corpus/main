@@ -27,11 +27,13 @@ Empty file with comment
 List of numbers
 =================================
 
-( 1 2 3/2 4 )
+( 1 2 3/2 4 5.7 10/3 )
 
 ---
 (source_file
   (list
+      (number)
+      (number)
       (number)
       (number)
       (number)

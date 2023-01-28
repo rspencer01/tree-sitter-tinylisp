@@ -61,7 +61,7 @@ module.exports = grammar({
       "is_odd",
     ),
 
-    number : $ => /\d+(\/\d+)?|\d+\.\d+/,
+    number : $ => /-?\d+(\/\d+)?|\d+\.\d+/,
 
     identifier : $ => /[^\s\(\)⋮]+/,
 

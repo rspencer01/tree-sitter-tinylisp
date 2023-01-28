@@ -211,7 +211,7 @@
     },
     "number": {
       "type": "PATTERN",
-      "value": "\\d+(\\/\\d+)?|\\d+\\.\\d+"
+      "value": "-?\\d+(\\/\\d+)?|\\d+\\.\\d+"
     },
     "identifier": {
       "type": "PATTERN",
