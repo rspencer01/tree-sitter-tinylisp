@@ -389,16 +389,17 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == 't') ADVANCE(41);
       if (lookahead == 215) ADVANCE(12);
       if (lookahead == 955) ADVANCE(5);
-      if (lookahead == 8942) ADVANCE(96);
+      if (lookahead == 63192) ADVANCE(95);
       if (lookahead == '\t' ||
           lookahead == '\n' ||
           lookahead == '\r' ||
           lookahead == ' ') SKIP(0)
       if (('0' <= lookahead && lookahead <= '9')) ADVANCE(35);
-      if (lookahead != 0) ADVANCE(95);
+      if (lookahead != 0 &&
+          lookahead != 8942) ADVANCE(95);
       END_STATE();
     case 1:
-      if (lookahead == '\n') ADVANCE(97);
+      if (lookahead == '\n') ADVANCE(96);
       if (lookahead != 0) ADVANCE(1);
       END_STATE();
     case 2:
@@ -782,7 +783,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       END_STATE();
     case 38:
       ACCEPT_TOKEN(sym_identifier);
-      if (lookahead == '\n') ADVANCE(97);
+      if (lookahead == '\n') ADVANCE(96);
       if (lookahead == '\t' ||
           lookahead == '\r' ||
           lookahead == ' ' ||
@@ -1483,9 +1484,6 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
           lookahead != 8942) ADVANCE(95);
       END_STATE();
     case 96:
-      ACCEPT_TOKEN(sym_dot);
-      END_STATE();
-    case 97:
       ACCEPT_TOKEN(sym_comment);
       END_STATE();
     default:
@@ -1802,7 +1800,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_is_odd] = ACTIONS(48),
     [sym_number] = ACTIONS(48),
     [sym_identifier] = ACTIONS(48),
-    [sym_dot] = ACTIONS(46),
+    [sym_dot] = ACTIONS(48),
     [sym_comment] = ACTIONS(46),
   },
   [8] = {
@@ -1841,7 +1839,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_is_odd] = ACTIONS(52),
     [sym_number] = ACTIONS(52),
     [sym_identifier] = ACTIONS(52),
-    [sym_dot] = ACTIONS(50),
+    [sym_dot] = ACTIONS(52),
     [sym_comment] = ACTIONS(50),
   },
   [9] = {
@@ -1880,7 +1878,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_is_odd] = ACTIONS(56),
     [sym_number] = ACTIONS(56),
     [sym_identifier] = ACTIONS(56),
-    [sym_dot] = ACTIONS(54),
+    [sym_dot] = ACTIONS(56),
     [sym_comment] = ACTIONS(54),
   },
   [10] = {
@@ -1919,7 +1917,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_is_odd] = ACTIONS(60),
     [sym_number] = ACTIONS(60),
     [sym_identifier] = ACTIONS(60),
-    [sym_dot] = ACTIONS(58),
+    [sym_dot] = ACTIONS(60),
     [sym_comment] = ACTIONS(58),
   },
   [11] = {
@@ -1957,7 +1955,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_is_odd] = ACTIONS(64),
     [sym_number] = ACTIONS(64),
     [sym_identifier] = ACTIONS(64),
-    [sym_dot] = ACTIONS(62),
+    [sym_dot] = ACTIONS(64),
     [sym_comment] = ACTIONS(62),
   },
   [12] = {
@@ -1995,7 +1993,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_is_odd] = ACTIONS(68),
     [sym_number] = ACTIONS(68),
     [sym_identifier] = ACTIONS(68),
-    [sym_dot] = ACTIONS(66),
+    [sym_dot] = ACTIONS(68),
     [sym_comment] = ACTIONS(66),
   },
   [13] = {
@@ -2134,8 +2132,8 @@ static const TSParseActionEntry ts_parse_actions[] = {
   [68] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_slib, 1),
   [70] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_list_repeat1, 1),
   [72] = {.entry = {.count = 1, .reusable = false}}, REDUCE(aux_sym_list_repeat1, 1),
-  [74] = {.entry = {.count = 1, .reusable = true}}, SHIFT(5),
-  [76] = {.entry = {.count = 1, .reusable = true}}, SHIFT(6),
+  [74] = {.entry = {.count = 1, .reusable = false}}, SHIFT(5),
+  [76] = {.entry = {.count = 1, .reusable = false}}, SHIFT(6),
   [78] = {.entry = {.count = 1, .reusable = true}},  ACCEPT_INPUT(),
   [80] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_source_file, 1),
   [82] = {.entry = {.count = 1, .reusable = true}}, SHIFT(9),

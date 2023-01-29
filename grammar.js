@@ -65,7 +65,7 @@ module.exports = grammar({
 
     identifier : $ => /[^\s\(\)⋮]+/,
 
-    dot : $ => '⋮',
+    dot : $ => //,
 
     comment: $ => token(seq(';', /.*/,'\n')),
   }

@@ -218,8 +218,8 @@
       "value": "[^\\s\\(\\)⋮]+"
     },
     "dot": {
-      "type": "STRING",
-      "value": "⋮"
+      "type": "PATTERN",
+      "value": ""
     },
     "comment": {
       "type": "TOKEN",
